@@ -7,10 +7,16 @@
 //
 
 import SwiftUI
+import CoreMotion
+
+var tiltOut = 0
+var prevTime = DispatchTime.now()
+var totalRotation: CGFloat = 0
+var delta: CGFloat = 10
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        MotionView()
     }
 }
 

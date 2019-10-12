@@ -13,6 +13,8 @@
 		B6791BCF23518E6700482EB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6791BCE23518E6700482EB8 /* Assets.xcassets */; };
 		B6791BD223518E6700482EB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6791BD123518E6700482EB8 /* Preview Assets.xcassets */; };
 		B6791BD523518E6700482EB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6791BD323518E6700482EB8 /* LaunchScreen.storyboard */; };
+		B6846FE22352504200C618C0 /* Flip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6846FE12352504200C618C0 /* Flip.swift */; };
+		B6846FE42352511700C618C0 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6846FE32352511700C618C0 /* TabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B6791BD123518E6700482EB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B6791BD423518E6700482EB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6791BD623518E6700482EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6846FE12352504200C618C0 /* Flip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flip.swift; sourceTree = "<group>"; };
+		B6846FE32352511700C618C0 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		B6791BC723518E6500482EB8 /* simpleFlip */ = {
 			isa = PBXGroup;
 			children = (
+				B6846FE02352503000C618C0 /* Views */,
 				B6791BC823518E6500482EB8 /* AppDelegate.swift */,
 				B6791BCA23518E6500482EB8 /* SceneDelegate.swift */,
 				B6791BCC23518E6500482EB8 /* ContentView.swift */,
@@ -73,6 +78,15 @@
 				B6791BD123518E6700482EB8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B6846FE02352503000C618C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6846FE12352504200C618C0 /* Flip.swift */,
+				B6846FE32352511700C618C0 /* TabView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +160,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6846FE42352511700C618C0 /* TabView.swift in Sources */,
+				B6846FE22352504200C618C0 /* Flip.swift in Sources */,
 				B6791BC923518E6500482EB8 /* AppDelegate.swift in Sources */,
 				B6791BCB23518E6500482EB8 /* SceneDelegate.swift in Sources */,
 				B6791BCD23518E6500482EB8 /* ContentView.swift in Sources */,
@@ -296,7 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aidan.simpleFlip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -316,7 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aidan.simpleFlip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
