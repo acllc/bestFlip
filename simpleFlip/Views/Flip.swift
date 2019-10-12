@@ -38,10 +38,10 @@ func startGyro() {
     motionManager.startGyroUpdates(to: OperationQueue.current!) { (data, Error) in
         if let myData = data {
             let currTime = DispatchTime.now()
-            let dt = prevTime.distance(to: currTime).milliseconds
+            let dt = prevTime.distance(to: currTime).millisecond
             prevTime = currTime
             // assuming rotationRate is in degrees/millisecond.
-            dTheta = myData.rotationRate.y * dt
+            let dTheta = myData.rotationRate.y * dt
             // If not milliseconds, convert dt to correct time unit
             // If rotationRate is in radians, convert to degrees or make future comparison check for 2*pi instead of 360 degrees
             totalRotation += dTheta
