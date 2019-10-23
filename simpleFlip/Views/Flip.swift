@@ -10,7 +10,6 @@ import SwiftUI
 import CoreMotion
 import Foundation
 
-var prevTime = DispatchTime.now()
 var totalRotation: CGFloat = 0
 var delta: CGFloat = 10
 
@@ -60,17 +59,18 @@ var body: some View {
 
        }
     }
+    @State private var prevTime = DispatchTime.now()
 func startGyro() {
     motionManager.gyroUpdateInterval = 0.2
     motionManager.startGyroUpdates(to: OperationQueue.current!) { (data, Error) in
         if let myData = data {
             let currTime = DispatchTime.now()
             var dt = 0
-            let interval = prevTime.Time(to: currTime)
-            if case .nanoseconds(let value) = interval {
+            let interval = self.prevTime.distance(to: currTime)
+            if case .milliseconds(let value) = interval {
                 dt = value
             }
-            prevTime = currTime
+            self.prevTime = currTime
             // assuming rotationRate is in degrees/millisecond.
             let dTheta: CGFloat = CGFloat(myData.rotationRate.y) * CGFloat(dt)
             
