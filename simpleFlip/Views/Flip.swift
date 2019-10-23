@@ -66,7 +66,7 @@ func startGyro() {
         if let myData = data {
             let currTime = DispatchTime.now()
             var dt = 0
-            let interval = prevTime.distance(to: currTime)
+            let interval = prevTime.Time(to: currTime)
             if case .nanoseconds(let value) = interval {
                 dt = value
             }
